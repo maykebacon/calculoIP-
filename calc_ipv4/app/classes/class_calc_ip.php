@@ -13,7 +13,7 @@ class calc_ip
 
     public function valida_endereco() {
 
-        $regexp = '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/[0-9]{1,2}$/';
+           $regexp = '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/[0-9]{1,2}$/';
 
         if ( ! preg_match( $regexp, $this->endereco_completo ) ) {
             return false;
@@ -90,7 +90,7 @@ class calc_ip
         
         return( abs( $this->total_ips() - 2 ) );
     }
-    public function primeiro_ip() {
+    public function primeiro_host() {
         if ( $this->cidr() == 32 ) {
             return null;
         } elseif ( $this->cidr() == 31 ) {
@@ -117,3 +117,4 @@ class calc_ip
     }
 }
 
+// a função ip2long Converte uma string contendo um endereço pontilhado do Protocolo da Internet (IPv4) em um inteiro longo.
